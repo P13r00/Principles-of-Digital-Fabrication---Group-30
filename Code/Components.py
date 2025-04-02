@@ -12,4 +12,7 @@ class Sensor:
         pass
 
 class Motor:
-    pass
+    def steer():
+        pass
+    def moveRandomly():
+        pass

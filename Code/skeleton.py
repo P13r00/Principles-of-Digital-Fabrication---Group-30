@@ -20,9 +20,9 @@ def moveRandomly():
 async def move():
     while True:
         if not com.Sensor.isThereAnObstacle():
-            com.motor.moveRandomly()
+            com.Motor.moveRandomly()
         else:
-            com.motor.steer()
+            com.Motor.steer()
             
         await asyncio.sleep(MAIN_SENSOR_TIME)
 

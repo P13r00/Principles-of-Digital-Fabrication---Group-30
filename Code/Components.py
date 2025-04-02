@@ -14,6 +14,9 @@ class Sensor:
         pass
 
 class Motor:
+    def maxSpeedInTurn(int angel):
+        #calculates the maximum allowable speed in a turn, based on the angle
+        
     def driveForward(int time):
         #move forward for time seconds
         #stop if detects an obstacle???

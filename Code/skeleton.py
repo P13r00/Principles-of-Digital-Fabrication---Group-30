@@ -6,13 +6,13 @@ x, y = 0, 0
 
 
 def initialiseMovement():
-    activateMotors()
-    activateSensor()
+    com.Motor.activateMotors()
+    com.Sensor.activateSensor()
 
 def initialiseSound():
-    activateAmplifier()
-    activateDecoder()
-    activateSpeaker()
+    com.Amplifier.activateAmplifier()
+    com.Decoder.activateDecoder()
+    com.Speaker.activateSpeaker()
     
 def moveRandomly():
     pass

@@ -1,3 +1,5 @@
+import random as rand
+
 class Decoder:
     pass
 
@@ -12,7 +14,20 @@ class Sensor:
         pass
 
 class Motor:
+    def driveForward(int time):
+        #move forward for time seconds
+        #stop if detects an obstacle???
+
+    def turn(int angle, bool direction)
+        #turn angle degrees either left (false), or right (true)
+        
     def steer():
         pass
+        
     def moveRandomly():
-        pass
+        int randTime = rand.randint(0, 5)
+        int randAngle = rand.randint(0, 360)
+        bool randDirection = bool(rand.getrandbits(1))
+        driveForward(randTime)
+        turn(randAngle, randDirection)
+        

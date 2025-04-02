@@ -26,10 +26,12 @@ async def move():
             
         await asyncio.sleep(MAIN_SENSOR_TIME)
 
-
 def main():
     #pre program pause
     initialiseMovement()
     initialiseSound()
     playMp3()
     asyncio.run(loop())
+
+if name == "main":
+    main()

@@ -28,9 +28,9 @@ class Motor:
         pass
         
     def moveRandomly():
-        int randTime = rand.randint(0, 5)
-        int randAngle = rand.randint(0, 360)
-        bool randDirection = bool(rand.getrandbits(1))
+        randTime = rand.randint(0, 5)
+        randAngle = rand.randint(0, 360)
+        randDirection = bool(rand.getrandbits(1))
         driveForward(randTime)
         turn(randAngle, randDirection)
         

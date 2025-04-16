@@ -18,6 +18,10 @@ def main():
         print(distance + " cm")
         time.sleep(0.5)
 
+def measure():
+    pulse()
+    return distance
+
 def pulse():
     trigPin.value = 0
     time.sleep(5 * microS)

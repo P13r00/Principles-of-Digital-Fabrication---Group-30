@@ -10,17 +10,14 @@ echoPin.direction = digitalio.Direction.INPUT
 
 microS = 0.000001
 
-distance = 0
-
 def main():
     while True:
-        pulse()
+        distance = measure()
         print(distance + " cm")
         time.sleep(0.5)
 
 def measure():
-    pulse()
-    return distance
+    return pulse()
 
 def pulse():
     trigPin.value = 0
@@ -29,7 +26,7 @@ def pulse():
     time.sleep(10 * microS)
     trigpin.value = 0
     
-    timer()
+    return timer()
 
 def timer():
     startTime = time.monotonic()
@@ -39,4 +36,4 @@ def timer():
             finalTime = time.monotonic()
     duration = finalTime - startTime
     cm = (duration/2) / 29.1
-    distance = cm
+    return cm

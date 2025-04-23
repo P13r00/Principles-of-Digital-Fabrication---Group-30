@@ -48,10 +48,6 @@ class Sensor:
         duration = finalTime - startTime
         cm = (duration/2) / 29.1
         return cm
-
-
-class Motor:
-    def drive(float time):
         
 
 class controller:

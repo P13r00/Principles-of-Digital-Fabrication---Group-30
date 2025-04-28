@@ -3,6 +3,8 @@ import board
 import digitalio
 import pwmio
 
+MAX_DISTANCE = 15
+
 # --- Ultrasonic Sensor Pins ---
 trigPin = digitalio.DigitalInOut(board.GP11)
 trigPin.direction = digitalio.Direction.OUTPUT
@@ -80,13 +82,13 @@ try:
         print(f"Distance: {distance:.2f} cm")
 
         # You can adjust this threshold
-        if distance < 15:
-            motors_off()
-        else:
-            if not switch.value:  # Optional: only move if switch not pressed
-                motors_on()
-            else:
+        if switch.value == True:  # Optional: only move if switch not pressed
+            if distance < MAX_DISTANCE:
                 motors_off()
+            else:
+                motors_on()
+        else:
+            motors_off()
 
         time.sleep(0.1)
 

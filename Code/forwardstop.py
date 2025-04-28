@@ -62,17 +62,16 @@ def measure_distance_cm():
     trigPin.value = True
     time.sleep(10 * microS)
     trigPin.value = False
-
-    while echoPin.value == 0:
-        pass
+    
     start = time.monotonic()
 
-    while echoPin.value == 1:
+    while echoPin.value == False:
         pass
+    
     end = time.monotonic()
 
     duration = end - start
-    distance = (duration * 1000000) / 58.2  # Convert to cm
+    distance = (duration * 343) / 200  # Convert to cm
     return distance
 
 # --- Main Loop ---
